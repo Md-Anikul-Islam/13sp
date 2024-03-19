@@ -104,19 +104,28 @@
             <p class="d-inline-block bg-secondary text-primary py-1 px-4">Clients</p>
             <h1 class="text-uppercase"> Our Clients </h1>
         </div>
-        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-            @foreach($client as $key=>$clientData)
-            <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='{{asset('images/client/'. $clientData->logo )}}' alt=''>">
-                <h4 class="text-uppercase">{{$clientData->name}}</h4>
-                <a href="{{$clientData->link}}">
-                    <p class="text-primary">Link</p>
-                </a>
+        <!-- Testimonial End -->
+        <div class="container-xxl">
+            <div class="container">
+                <div class="swiper mySwiper mySwipertwo">
+                    <div class="swiper-wrapper">
+                        @foreach($client as $key=>$clientData)
+                            <div class="swiper-slide d-flex justify-content-center border">
+                                <a href="{{$clientData->link}}">
+                                    <img src="{{asset('images/client/'. $clientData->logo )}}" alt="">
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
             </div>
-            @endforeach
-
         </div>
     </div>
 </div>
-<!-- Testimonial End -->
+
+
+
+
+
 
 @endsection
