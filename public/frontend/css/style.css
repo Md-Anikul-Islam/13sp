@@ -1,6 +1,7 @@
 /********** Template CSS **********/
 :root {
     --primary: #EB1616;
+    --body-text: #a1a1a1;
     --secondary: #191C24;
     --light: #6C7293;
     --dark: #000000;
@@ -12,6 +13,9 @@
     right: 45px;
     bottom: 45px;
     z-index: 99;
+}
+.team-img.position-relative span {
+    color: var(--body-text) !important;
 }
 
 
@@ -208,7 +212,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, .85);
+    /*background: rgba(0, 0, 0, .85);*/
     transition: .5s;
 }
 
